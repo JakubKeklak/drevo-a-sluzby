@@ -26,7 +26,7 @@ const FaqsBlock = () => {
             <div className="container faqs-block__wrapper">
                 <ul className="faqs-block__list">
                     {FaqsData.map((faq, index) => (
-                        <li className='faqs__card'>
+                        <li className='faqs__card' key={index}>
                             <span className='faqs__title'>{faq.title}</span>
                             <motion.p
                                 initial={{ opacity: 0, y: -20 }}

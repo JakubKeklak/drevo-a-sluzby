@@ -59,8 +59,9 @@
 .services__icon {
    display: flex;
     align-items: center;
-    color: var(--tertiary-color);
-    font-size: 5rem;
+    fill: var(--tertiary-color);
+    width: 5rem;
+    height: 5rem;
     transition: all 1s ease;
 }
 
@@ -79,6 +80,7 @@
 
 .services__card:hover .services__icon,
 .services__card:hover .services__title {
+    fill: var(--quaternary-color);
     color: var(--quaternary-color);
     transition: color 0.5s ease;
 }

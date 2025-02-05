@@ -15,9 +15,11 @@
   --secondary-color-02:rgba(142, 139, 130, 0.2);
   --tertiary-color:rgb(233, 220, 190);
   --tertiary-color-07:rgba(233, 220, 190,0.7);
+  --tertiary-color-05:rgba(233, 220, 190,0.5);
   --tertiary-color-03:rgba(233, 220, 190,0.3);
   --tertiary-color-01:rgba(233, 220, 190,0.1);
   --quaternary-color:rgb(243, 243, 243);
+  --quaternary-color-03:rgba(243, 243, 243,0.3);
   --quaternary-color-05:rgba(243, 243, 243,0.5);
   --quaternary-color-08:rgba(243, 243, 243,0.8);
  
@@ -39,7 +41,8 @@ body {
   max-width: 2500px;
   margin: 0 auto;
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;	
+  font-display: swap;
 }
 
 

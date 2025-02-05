@@ -1,6 +1,7 @@
 import './ContentBlock.css';
 import { useState } from 'react';
 import Heading from './typography/Heading';
+import Text from './text';
 import Image from './parts/Image';
 import Button from './button';
 import { motion } from "motion/react"
@@ -22,15 +23,16 @@ const ContentBlock = ({ title, text, image, imageRight, video }) => {
                             className='content-block__heading-line'></motion.div>
                         <Heading tag="h2">{title}</Heading>
                     </div>
-                    {text}
-
+                    <Text>
+                        {text}
+                    </Text>
                 </article>
                 {image &&
                     <div className='content-block__image'>
                         <Image src={image} alt="" />
                         {video &&
                             <div className="content-block__play-button">
-                                <Button icon={play === false ? "GrPlayFill" : 'GrStopFill'} buttonFunction={() => setPlay(!play)} variant="tertiary"/>
+                                <Button icon="Play" buttonFunction={() => setPlay(!play)} variant="tertiary" buttonTitle='Play' />
                             </div>
                         }
                     </div>
@@ -39,13 +41,13 @@ const ContentBlock = ({ title, text, image, imageRight, video }) => {
             {play === true &&
                 <div className="content-block__video">
                     <div className="video-close-button">
-                        <Button icon="Close" buttonFunction={() => setPlay(false)} variant="tertiary"/>
+                        <Button icon="Close" buttonFunction={() => setPlay(false)} variant="tertiary" />
                     </div>
                     <div className="video-content">
 
-                    <video muted loop src={video}  controls />
+                        <video muted loop src={video} controls />
                     </div>
-                   
+
                 </div>
             }
         </section>

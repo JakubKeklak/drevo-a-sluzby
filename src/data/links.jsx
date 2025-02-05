@@ -42,7 +42,7 @@ export const links = [
         page: "Blog",
         url: "/blog",
         exact: true,
-        navlink: true
+        /*navlink: true*/
     },
     {
         name: "Portfolio",

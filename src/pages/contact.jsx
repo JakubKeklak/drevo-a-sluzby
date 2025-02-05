@@ -10,9 +10,13 @@ const Contact = () => {
     <>
       <SmallHero
         title="Spojte sa s nami – sme tu pre vás!"
-        text="Máte otázky, potrebujete poradiť alebo si chcete objednať? Neváhajte nás kontaktovať! Sme tu,
-         aby sme vám poskytli všetky potrebné informácie a pomohli s výberom toho najlepšieho riešenia. Zavolajte nám,
-          napíšte e-mail alebo nás navštívte osobne – radi vás privítame."
+        text={
+          <p>
+            Máte otázky, potrebujete poradiť alebo si chcete objednať? Neváhajte nás kontaktovať! Sme tu,
+            aby sme vám poskytli všetky potrebné informácie a pomohli s výberom toho najlepšieho riešenia. Zavolajte nám,
+            napíšte e-mail alebo nás navštívte osobne – radi vás privítame.
+          </p>
+        }
         bgText="Kontakt"
       />
       <div className="contact container">

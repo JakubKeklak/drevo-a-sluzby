@@ -21,15 +21,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(1.5rem, 1.4595rem + 0.2025vw, 1.7rem);
-  aspect-ratio: 1/1;
-  height: clamp(2.2rem, 2.1392rem + 0.3038vw, 2.5rem);
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
+.button__icon svg {
+  width: 70%;
+  height: 70%;
+}
 .button--primary {
   border: solid 1px var(--tertiary-color);
   background-color: var(--tertiary-color-03);
   color: var(--quaternary-color);
+  fill: var(--quaternary-color);
   transition: all 0.s ease;
 }
 
@@ -41,7 +45,7 @@
 .button--primary .active,
 .button--primary:hover .button__text {
   color: var(--tertiary-color);
-
+  fill: var(--tertiary-color);
 }
 
 
@@ -55,6 +59,7 @@
 .button--secondary .button__icon {
   background-color: var(--primary-color);
   color: var(--tertiary-color);
+  fill: var(--tertiary-color);
 }
 
 .button--secondary.active,
@@ -65,23 +70,27 @@
 .button--tertiary {
   background-color: var(--tertiary-color);
   color: var(--primary-color);
+  fill: var(--primary-color);
   transition: all 0.5s ease;
 }
 
 .button--tertiary:hover {
   background-color: var(--primary-color);
   color: var(--tertiary-color);
+  fill: var(--tertiary-color);
 }
 
 .button--quaternary {
   border: solid 1px var(--primary-color);
   background-color: var(--primary-color);
   color: var(--tertiary-color);
+  fill: var(--tertiary-color);
   transition: all 0.5s ease;
 }
 .button--quaternary:hover {
   background-color: var(--quaternary-color);
   color: var(--primary-color);
+  fill: var(--primary-color);
   transition: all 0.5s ease;
 }
 button:disabled {

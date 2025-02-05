@@ -69,8 +69,7 @@ const Header = () => {
                   <NavLink
                     className={({ isActive }) => `menuItem ${isActive ? "menuItem--active" : ""}`}
                     to={link.url}
-                    exact
-
+                
                     onClick={() => { closeNavbar(); closeCalc(); }}
                   >
                     <span>{link.name}</span>

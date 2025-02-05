@@ -12,8 +12,8 @@ const ServicesBlock = () => {
                 <ul className="services-block__list">
                     {slides.map((service, index) => {
                         return (
-                            <li>
-                                <HashLink className='services__card' key={index} href={service.buttonLink} to={service.buttonLink} smooth={true}  >
+                            <li key={index}>
+                                <HashLink className='services__card'  href={service.buttonLink} to={service.buttonLink} smooth={true}  >
                                     <span className='services__icon'> <Icon icon={service.icon} /></span>
                                     <motion.span
                                         initial={{ opacity: 0, y: -20 }}
@@ -27,7 +27,7 @@ const ServicesBlock = () => {
                     })}
                 </ul>
                 <div className='services-block__button'>
-                    <Button variant='primary' url='/services' text='Prehľad služieb' icon="FaAngleRight" />
+                    <Button variant='primary' url='/services' text='Prehľad služieb' icon="RightArrow" />
                     <Button variant='primary' url='/contact' text='Kontaktujte nás' icon="Mail" />
                 </div>
             </div>

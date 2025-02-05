@@ -30,10 +30,11 @@
 }
 .content-block__image {
     position: relative;
-    width: 75%;
+    display: flex;
+    justify-self: center;
+    width: 70%;
     min-width: 300px;
-    aspect-ratio: 1/1;
-    justify-self: end;
+    aspect-ratio: 300/350;
     flex: 1;
     z-index:2;
 }
@@ -45,7 +46,6 @@
     bottom: 20px;
     right: -20px;
     left: 20px;
-   /* background-color: var(--primary-color);*/
     border: solid clamp(0.3125rem, 0.1989rem + 0.5682vw, 0.625rem) var(--primary-color);
     z-index: -1;
 }

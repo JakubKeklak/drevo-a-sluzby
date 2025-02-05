@@ -4,10 +4,6 @@ import { useContext } from 'react'
 import { ProductContext } from '../context/dataContext'
 import ProductCard from '../components/productCard'
 import Text from '../components/text'
-import { blogs } from '../data/blogs';
-import BlogWrapper from '../components/BlogWrapper';
-import BlogCard from '../components/BlogCard';
-import ColoredWrapper from '../components/coloredWrapper';
 import Heading from '../components/typography/Heading';
 import SmallHero from '../components/SmallHero'
 
@@ -20,11 +16,16 @@ const Cennik = () => {
         <>
             <SmallHero
                 title="Zima vás neprekvapí!"
-                text="Zabezpečte si teplo domova s naším kvalitným palivovým drevom! Ponúkame široký výber druhov dreva za výhodné ceny, ideálne na vykurovanie aj dlhé zimné večery. Naše drevo je starostlivo pripravené, ekologické a dostupné v rôznych baleniach podľa vašich potrieb. Objednajte si ešte dnes a užite si spoľahlivé teplo počas celej zimy!"
+                text={
+                    <p>
+                        Zabezpečte si teplo domova s naším kvalitným palivovým drevom! Ponúkame široký výber druhov dreva za výhodné ceny, ideálne na vykurovanie aj dlhé zimné večery. Naše drevo je starostlivo pripravené, ekologické a dostupné v rôznych baleniach podľa vašich potrieb. Objednajte si ešte dnes a užite si spoľahlivé teplo počas celej zimy!
+                    </p>
+                }
+
                 bgText="Cenník"
             />
             <section className="cennik__wrapper container">
-                
+
                 <div className="cennik__content">
                     <div className='cennik__products'>
                         <Heading tag="h3" className='cennik__title'>Aktualna ponuka palivoveho dreva</Heading>
@@ -64,19 +65,6 @@ const Cennik = () => {
                     </Text>
                 </div>
             </section >
-            <ColoredWrapper color="quaternary">
-                <div className="container">
-                    <BlogWrapper
-                        title="Zaujimavosti"
-                        buttonText="Všetky články"
-                        buttonUrl="/blog"
-                    >
-                        {blogs.filter(blog => blog.category === 'Drevo').slice(0, 4).map((blog, index) => (
-                            <BlogCard key={index} blog={blog} />
-                        ))}
-                    </BlogWrapper>
-                </div>
-            </ColoredWrapper>
         </>
     )
 }

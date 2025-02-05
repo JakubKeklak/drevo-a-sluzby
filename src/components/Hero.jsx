@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import Button from './button'
 import Image from './parts/Image'
 import { Link } from 'react-scroll';
-import { IoIosArrowDown } from "react-icons/io";
+
 import { motion } from "motion/react"
 
 const Hero = ({ buttonVariant, image, text, buttonUrl, title, video, scrollButton }) => {
@@ -59,9 +59,9 @@ const Hero = ({ buttonVariant, image, text, buttonUrl, title, video, scrollButto
                                 viewport={{ once: true }}  
                                 className='hero__content-buttons'>
                                 {buttonUrl &&
-                                    <Button text='služby' url={buttonUrl}  icon="FaAngleRight" />
+                                    <Button text='služby' url={buttonUrl}  icon="RightArrow" />
                                 }
-                                <Button variant="tertiary" icon={play === false ? "GrPlayFill" : 'GrStopFill'} buttonFunction={() => setPlay(!play)} />
+                                <Button variant="tertiary" icon={play === false ? "Play" : 'Stop'} buttonFunction={() => setPlay(!play)} buttonTitle="Play"/>
                                 
                             </motion.div>
                         </div>
@@ -69,7 +69,7 @@ const Hero = ({ buttonVariant, image, text, buttonUrl, title, video, scrollButto
                 </div>
                 {scrollButton &&
                     <Link className="hero__scroll-down" to="servicesBlock" activeClass="menuItem--active-services" spy={true} offset={window.innerWidth <= 600 ? -50 : -60} smooth={true} duration={1500}>
-                        <IoIosArrowDown />
+                        
                     </Link>
                 }
             </div>

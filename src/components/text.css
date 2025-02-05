@@ -1,4 +1,4 @@
-.text {
+.text p{
     font-weight: 400;
     line-height: 1.5;
     text-align: left;
@@ -6,19 +6,19 @@
     padding: 0; 
 }
 
-.text--small{
+.text--small p{
     font-size:var(--font-size-1);
 }
 
-.text--regular{
+.text--regular p{
     font-size:var(--font-size-2);
 }
 
-.text--big{
+.text--big p{
     font-size:var(--font-size-3);
 }
 
-.text--margin-off {
+.text--margin-off p{
     margin: 0;
 }
 .text ul {

@@ -46,15 +46,6 @@
     top: 50%;
 }
 
-.gallery__modal-navigation button {
-    background-color:var(--secondary-color);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
 
 .gallery__modal-navigation button:hover {
     background-color: var(--tertiary-color);
