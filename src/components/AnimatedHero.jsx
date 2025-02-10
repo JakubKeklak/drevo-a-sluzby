@@ -7,6 +7,7 @@ import Image from './parts/Image'
 const AnimatedHero = ({ data, buttonVariant, icon, size, image, text, buttonUrl, title, video, scrollButton }) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const intervalRef = useRef(null);
+    const titleRef = useRef(null);
     const videoRef = useRef(null);
     const [play, setPlay] = useState(false);
     const handleActiveIndex = (index) => {
@@ -34,6 +35,25 @@ const AnimatedHero = ({ data, buttonVariant, icon, size, image, text, buttonUrl,
         }
     }, []);
 
+    useEffect(() => {
+        const elements = [titleRef.current];
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 1 });
+
+        elements.forEach((el) => {
+            if (el) observer.observe(el);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
     const heroSize = size ? 'animated-hero--small' : 'animated-hero--large';
     return (
         <div className={`animated-hero ${heroSize} `}>
@@ -47,7 +67,7 @@ const AnimatedHero = ({ data, buttonVariant, icon, size, image, text, buttonUrl,
                 })}
                 <div className='animated-hero__card-content container'>
                     <div className='animated-hero__content'>
-                        <h2 className='animated-hero__content-title'>
+                        <h2 className='animated-hero__content-title' ref={titleRef}>
                             {title}
                         </h2>
                         <p className='animated-hero__content-text'>

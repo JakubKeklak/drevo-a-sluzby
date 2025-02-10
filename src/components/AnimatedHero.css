@@ -93,7 +93,14 @@
 }
 
 .animated-hero__content-title {
+    transform: translateY(-20px);
+    opacity: 0;
     font-size: clamp(1rem, 0.9273rem + 0.3636vw, 1.2rem);
+}
+.animated-hero__content-title.animate{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
 }
 
 .animated-hero__content-text {

@@ -1,3 +1,24 @@
+.hero__content-title,
+.hero__content-text,
+.hero__content-buttons {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.hero__content-title.animate,
+.hero__content-text.animate,
+.hero__content-buttons.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero__content-text{
+    transition-delay: 0.2s;
+}
+.hero__content-buttons{
+    transition-delay: 0.4s;
+}
 .hero {
     position: relative;
     width: 100%;
