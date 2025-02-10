@@ -52,8 +52,8 @@ const Gallery = ({ data, variant }) => {
                         </span>
                         <Image src={data[selectedImageIndex].image} alt={selectedImageIndex} />
                         <div className="gallery__modal-navigation">
-                            <Button variant="secondary" buttonFunction={showPrevImage} icon="Close" />
-                            <Button variant="tertiary" buttonFunction={showNextImage} icon="Play" />
+                            <Button variant="tertiary" buttonFunction={showPrevImage} icon="Prev" />
+                            <Button variant="tertiary" buttonFunction={showNextImage} icon="Next" />
                         </div>
                     </div>
                 </div>

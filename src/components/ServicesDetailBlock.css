@@ -5,6 +5,7 @@
     justify-content: center;
     background-color: var(--quaternary-color);
     padding: var(--space-4) 0;
+    scroll-margin-top: 70px;
 }
 
 .services-detail-block:nth-child(odd) {
@@ -97,7 +98,7 @@
 
     .services-detail-block__gallery {
         max-height: 600px;
-        margin: 0;
+        margin: 0 calc(var(--space-1) * -1);
     }
 
     .services-detail-block__content,

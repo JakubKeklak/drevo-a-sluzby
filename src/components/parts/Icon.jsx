@@ -11,6 +11,9 @@ import { ReactComponent as Play } from "../../svg/play.svg";
 import { ReactComponent as Stop } from "../../svg/stop.svg";
 import { ReactComponent as Close } from "../../svg/close.svg";
 import { ReactComponent as SentMail } from "../../svg/sentMail.svg";
+import { ReactComponent as Next } from "../../svg/next.svg";
+import { ReactComponent as Prev } from "../../svg/prev.svg";
+import { ReactComponent as Down } from "../../svg/down.svg";
 
 const icons = {
   Facebook: Facebook,
@@ -25,7 +28,10 @@ const icons = {
   Play: Play,
   Stop: Stop,
   Close: Close,
-  SentMail: SentMail
+  SentMail: SentMail,
+  Next: Next,
+  Prev: Prev,
+  Down: Down,
 };
 
 const Icon = ({ icon }) => {

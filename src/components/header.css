@@ -244,4 +244,11 @@
     .header{
         height: 50px;
     }
+    .header__icons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        height: 100%;
+        max-width: max-content;
+    }
 }

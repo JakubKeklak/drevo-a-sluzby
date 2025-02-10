@@ -82,7 +82,7 @@ const Header = () => {
         </nav>
         <div className="header__icons">
           <div className={`icon icon-kosik ${productSummaries.length > 0 ? 'icon-kosik--view' : ''}`} onClick={handleShowCalc}>
-            <Icon icon="Shop" />
+            <Icon icon="Kosik" />
             <span className='shop-count'>{productSummaries.length}</span>
           </div>
           <a href="https://www.facebook.com/jakub.keklak?locale=sk_SK" target='blank' className="icon">

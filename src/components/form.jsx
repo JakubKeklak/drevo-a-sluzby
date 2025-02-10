@@ -185,7 +185,7 @@ const ContactForm = ({ productSummaries, sum, type }) => {
                     />
                 </div>
                 <div className='form__checkbox'>
-                    <label for="gdpr">
+                    <label htmlFor="gdpr">
                     <input type="checkbox" name="gdpr" id="gdpr" required value={formData.gdpr}
                         onChange={handleChange} />
                         <div className='checkbox'></div>

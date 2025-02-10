@@ -78,6 +78,17 @@
     text-align: center;
 }
 
+.services__title {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.services__title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .services__card:hover .services__icon,
 .services__card:hover .services__title {
     fill: var(--quaternary-color);

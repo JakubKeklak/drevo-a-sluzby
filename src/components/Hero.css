@@ -133,10 +133,9 @@
     align-items: center;
     z-index: 2;
     cursor: pointer;
-    font-size: 2.5rem;
-    width: 3rem;
-    height: 3rem;
-    color: var(--tertiary-color);
+    width: 1.3rem;
+    height: 1.3rem;
+    fill: var(--tertiary-color);
     animation: arrowSrcoll 1.5s infinite;
 }
 
@@ -156,7 +155,7 @@
 
 
 @media screen and (max-width: 620px) {
-   
+
 
     .hero__content {
         display: flex;
@@ -185,7 +184,13 @@
         padding: 0px;
     }
 
+    .hero__scroll-down {
+        width: 1rem;
+        height: 1rem;
+    }
+
 }
+
 @media screen and (max-height: 640px) {
 
     .hero__content-title {
@@ -197,7 +202,7 @@
         text-transform: uppercase;
         width: 90%;
     }
-    
+
     .hero__scroll-down {
         bottom: 3%;
     }

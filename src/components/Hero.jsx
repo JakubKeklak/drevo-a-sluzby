@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import Button from './button'
 import Image from './parts/Image'
 import { Link } from 'react-scroll';
-
+import Icon from './parts/Icon'
 import { motion } from "motion/react"
 
 const Hero = ({ buttonVariant, image, text, buttonUrl, title, video, scrollButton }) => {
@@ -69,7 +69,7 @@ const Hero = ({ buttonVariant, image, text, buttonUrl, title, video, scrollButto
                 </div>
                 {scrollButton &&
                     <Link className="hero__scroll-down" to="servicesBlock" activeClass="menuItem--active-services" spy={true} offset={window.innerWidth <= 600 ? -50 : -60} smooth={true} duration={1500}>
-                        
+                        <Icon icon="Down" />
                     </Link>
                 }
             </div>
