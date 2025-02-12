@@ -11,7 +11,7 @@
 }
 
 .product__card__image {
-    aspect-ratio: 1/1;
+    aspect-ratio: 1/0.5;
     object-fit: cover;
     object-position: center;
 

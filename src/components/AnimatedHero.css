@@ -1,3 +1,29 @@
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-hero__text {
+    display: none;
+    opacity: 0;
+}
+
+.animated-hero__text--active {
+    display: inline-block;
+    opacity: 1;
+}
+
+.fade-slide {
+    animation: fadeSlideIn 0.3s ease-in-out;
+}
+
+
 .animated-hero {
     position: relative;
     width: 100%;

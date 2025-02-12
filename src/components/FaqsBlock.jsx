@@ -1,5 +1,5 @@
 import './FaqsBlock.css'
-import { motion } from "motion/react"
+
 
 const FaqsData = [
     {
@@ -28,14 +28,11 @@ const FaqsBlock = () => {
                     {FaqsData.map((faq, index) => (
                         <li className='faqs__card' key={index}>
                             <span className='faqs__title'>{faq.title}</span>
-                            <motion.p
-                                initial={{ opacity: 0, y: -20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: .5, delay: index * .2 }}
-                                viewport={{ once: true }}
+                            <p
+                               
                                 className='faqs__text'>
                                 {faq.text}
-                            </motion.p>
+                            </p>
                         </li>
                     ))}
                 </ul>
